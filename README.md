@@ -1,12 +1,27 @@
-# React + Vite
+# Hangman Game (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A classic Hangman game built with React and Vite. Guess the hidden word by entering letters before running out of attempts. Features a simple and interactive interface, with options to restart and track your progress.
 
-Currently, two official plugins are available:
+## Features
+- Interactive gameplay.
+- Random word generation.
+- Track remaining attempts.
+- Restart game functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- Vite
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+## How to Run
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open your browser and play the game!
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<!-- ## Live Demo -->
+<!-- [Link to live demo (if deployed)] -->
+
+<!-- ## Screenshots -->
+<!-- [Screenshot of the game] -->
