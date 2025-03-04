@@ -33,6 +33,11 @@ const App = () => {
     .split('')
     .every((letter) => guessedLetters.includes(letter))
 
+  // Restart the game
+  const restartGame = () => {
+    setGuessedLetters([])
+  }
+
   return (
     <div className="app">
       <Header />
@@ -42,6 +47,9 @@ const App = () => {
         guessedLetters={guessedLetters}
         onLetterClick={handleLetterClick}
       />
+      {isGameOver && (
+        <GameOverModal isWin={isWin} word={word} onRestart={restartGame} />
+      )}
     </div>
   )
 }
