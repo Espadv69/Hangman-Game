@@ -11,4 +11,8 @@ export const useHangmanGame = () => {
   )
 
   const attemptsRemaining = maxAttempts - incorrectLetters.length
+
+  const isGameOver =
+    attemptsRemaining <= 0 ||
+    word.split('').every((letter) => guessedLetters.includes(letter))
 }
