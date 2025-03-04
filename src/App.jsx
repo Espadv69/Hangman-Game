@@ -28,6 +28,11 @@ const App = () => {
     attemptsRemaining <= 0 ||
     word.split('').every((letter) => guessedLetters.includes(letter))
 
+  // Check if the player won
+  const isWin = word
+    .split('')
+    .every((letter) => guessedLetters.includes(letter))
+
   return (
     <div className="app">
       <Header />
