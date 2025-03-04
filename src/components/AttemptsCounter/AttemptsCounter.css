@@ -1,0 +1,9 @@
+.attempts-counter {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.attempts-counter span {
+  font-weight: bold;
+  color: #6200ea;
+}
