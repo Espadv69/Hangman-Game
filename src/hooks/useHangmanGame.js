@@ -9,4 +9,6 @@ export const useHangmanGame = () => {
   const incorrectLetters = guessedLetters.filter(
     (letter) => !word.includes(letter)
   )
+
+  const attemptsRemaining = maxAttempts - incorrectLetters.length
 }
