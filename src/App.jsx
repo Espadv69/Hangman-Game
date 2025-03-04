@@ -23,6 +23,11 @@ const App = () => {
   )
   const attemptsRemaining = maxAttempts - incorrectLetters.length
 
+  // Check if the game is over
+  const isGameOver =
+    attemptsRemaining <= 0 ||
+    word.split('').every((letter) => guessedLetters.includes(letter))
+
   return (
     <div className="app">
       <Header />
