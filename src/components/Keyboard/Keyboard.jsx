@@ -3,7 +3,7 @@ const KeyBoard = ({ guessedLetters, onLetterClick }) => {
 
   return (
     <div className="keyboard">
-      {alphabet.split('').map((letter) => (
+      {alphabet.map((letter) => (
         <button
           key={letter}
           onClick={() => onLetterClick(letter)}
