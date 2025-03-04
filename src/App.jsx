@@ -15,6 +15,13 @@ const App = () => {
     }
   }
 
+  // Calculate the number of attempts remaining
+  const maxAttempts = 6
+  const incorrectLetters = guessedLetters.filter(
+    (letter) => !word.includes(letter)
+  )
+  const attemptsRemaining = maxAttempts - incorrectLetters.length
+
   return (
     <div className="app">
       <Header />
