@@ -19,4 +19,10 @@ export const useHangmanGame = () => {
   const isWin = word
     .split('')
     .every((letter) => guessedLetters.includes(letter))
+
+  const addGuessedLetter = (letter) => {
+    if (!guessedLetters.includes(letter)) {
+      setGuessedLetters([...guessedLetters, letter])
+    }
+  }
 }
