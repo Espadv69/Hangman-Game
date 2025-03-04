@@ -1,3 +1,5 @@
+import './AttemptsCounter.css'
+
 const AttemptsCounter = ({ attempts }) => {
   return (
     <div className="attempts-counter">
