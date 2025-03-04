@@ -1,6 +1,6 @@
 import './Keyboard.css'
 
-const KeyBoard = ({ guessedLetters, onLetterClick }) => {
+const KeyBoard = ({ guessedLetters, onLetterClick, isGameOver }) => {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
   return (
@@ -9,7 +9,7 @@ const KeyBoard = ({ guessedLetters, onLetterClick }) => {
         <button
           key={letter}
           onClick={() => onLetterClick(letter)}
-          disabled={guessedLetters.includes(letter)}
+          disabled={guessedLetters.includes(letter) || isGameOver}
         >
           {letter}
         </button>
