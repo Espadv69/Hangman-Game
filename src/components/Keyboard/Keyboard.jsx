@@ -1,3 +1,5 @@
+import './Keyboard.css'
+
 const KeyBoard = ({ guessedLetters, onLetterClick }) => {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
