@@ -26,6 +26,7 @@ const App = () => {
     <div className="app">
       <Header />
       <WordDisplay word={word} guessedLetters={guessedLetters} />
+      <AttemptsCounter attempts={attemptsRemaining} />
       <KeyBoard
         guessedLetters={guessedLetters}
         onLetterClick={handleLetterClick}
