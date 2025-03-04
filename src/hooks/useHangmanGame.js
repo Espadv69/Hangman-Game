@@ -25,4 +25,9 @@ export const useHangmanGame = () => {
       setGuessedLetters([...guessedLetters, letter])
     }
   }
+
+  const restartGame = () => {
+    setWord(getRandomWord())
+    setGuessedLetters([])
+  }
 }
