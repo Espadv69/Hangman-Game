@@ -5,3 +5,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f4f4f9;
+  color: #121212;
+}
+
+.app {
+  margin: 0 auto;
+  padding: .4rem;
+  max-width: 800px;
+
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 5px;
+
+  color: white;
+  background-color: #6200ea;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
