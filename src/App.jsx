@@ -2,11 +2,11 @@ import { useState } from 'react'
 
 import Header from './components/Header/Header'
 import WordDisplay from './components/WordDisplay/WordDisplay'
+import KeyBoard from './components/Keyboard/Keyboard'
 
 const App = () => {
-  // Simulate a word to guess
-  const [word] = useState('REACT')
-  const [guessedLetters] = useState(['R', 'C'])
+  const [word] = useState('REACT') // Word to guess
+  const [guessedLetters, setGuessedLetters] = useState([]) // Store guessed letters
 
   return (
     <div className="app">
