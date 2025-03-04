@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useHangmanGame } from './hooks/useHangmanGame'
 
 import Header from './components/Header/Header'
 import WordDisplay from './components/WordDisplay/WordDisplay'
