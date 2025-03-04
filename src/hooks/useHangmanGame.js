@@ -15,4 +15,8 @@ export const useHangmanGame = () => {
   const isGameOver =
     attemptsRemaining <= 0 ||
     word.split('').every((letter) => guessedLetters.includes(letter))
+
+  const isWin = word
+    .split('')
+    .every((letter) => guessedLetters.includes(letter))
 }
