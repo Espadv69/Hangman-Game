@@ -46,6 +46,7 @@ const App = () => {
       <KeyBoard
         guessedLetters={guessedLetters}
         onLetterClick={handleLetterClick}
+        isGameOver={isGameOver}
       />
       {isGameOver && (
         <GameOverModal isWin={isWin} word={word} onRestart={restartGame} />
