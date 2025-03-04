@@ -1,3 +1,5 @@
+import './GameOverModal.css'
+
 const GameOverModal = ({ isWin, word, onRestart }) => {
   return (
     <div className="game-over-modal">
