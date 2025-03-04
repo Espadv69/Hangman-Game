@@ -5,6 +5,7 @@ import WordDisplay from './components/WordDisplay/WordDisplay'
 import KeyBoard from './components/Keyboard/Keyboard'
 import AttemptsCounter from './components/AttemptsCounter/AttemptsCounter'
 import GameOverModal from './components/GameOverModal/GameOverModal'
+import RestartButton from './components/RestartButton/RestartButton'
 
 const App = () => {
   const [word] = useState('REACT') // Word to guess
@@ -51,6 +52,7 @@ const App = () => {
       {isGameOver && (
         <GameOverModal isWin={isWin} word={word} onRestart={restartGame} />
       )}
+      <RestartButton onRestart={restartGame} />
     </div>
   )
 }
