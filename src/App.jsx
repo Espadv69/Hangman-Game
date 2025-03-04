@@ -9,36 +9,15 @@ import GameOverModal from './components/GameOverModal/GameOverModal'
 import RestartButton from './components/RestartButton/RestartButton'
 
 const App = () => {
-  const [word] = useState('REACT') // Word to guess
-  const [guessedLetters, setGuessedLetters] = useState([]) // Store guessed letters
-
-  const handleLetterClick = (letter) => {
-    if (!guessedLetters.includes(letter)) {
-      setGuessedLetters([...guessedLetters, letter])
-    }
-  }
-
-  // Calculate the number of attempts remaining
-  const maxAttempts = 6
-  const incorrectLetters = guessedLetters.filter(
-    (letter) => !word.includes(letter)
-  )
-  const attemptsRemaining = maxAttempts - incorrectLetters.length
-
-  // Check if the game is over
-  const isGameOver =
-    attemptsRemaining <= 0 ||
-    word.split('').every((letter) => guessedLetters.includes(letter))
-
-  // Check if the player won
-  const isWin = word
-    .split('')
-    .every((letter) => guessedLetters.includes(letter))
-
-  // Restart the game
-  const restartGame = () => {
-    setGuessedLetters([])
-  }
+  const {
+    word,
+    guessedLetters,
+    attemptsRemaining,
+    isGameOver,
+    isWin,
+    addGuessedLetter,
+    restartGame,
+  } = useHangmanGame()
 
   return (
     <div className="app">
@@ -47,7 +26,7 @@ const App = () => {
       <AttemptsCounter attempts={attemptsRemaining} />
       <KeyBoard
         guessedLetters={guessedLetters}
-        onLetterClick={handleLetterClick}
+        onLetterClick={addGuessedLetter}
         isGameOver={isGameOver}
       />
       {isGameOver && (
