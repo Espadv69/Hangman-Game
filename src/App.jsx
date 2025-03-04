@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from './components/Header/Header'
 import WordDisplay from './components/WordDisplay/WordDisplay'
 import KeyBoard from './components/Keyboard/Keyboard'
+import AttemptsCounter from './components/AttemptsCounter/AttemptsCounter'
 
 const App = () => {
   const [word] = useState('REACT') // Word to guess
