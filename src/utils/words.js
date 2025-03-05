@@ -46,6 +46,14 @@ export const getRandomWord = (category = 'all') => {
     const allWords = Object.values(wordsByCategory).flat()
     return allWords[Math.floor(Math.random() * allWords.length)]
   }
+
   const categoryWords = wordsByCategory[category]
+  if (!categoryWords) {
+    console.error(
+      `Categoría "${category}" no encontrada. Usando categoría "all".`
+    )
+    return getRandomWord('all')
+  }
+
   return categoryWords[Math.floor(Math.random() * categoryWords.length)]
 }
