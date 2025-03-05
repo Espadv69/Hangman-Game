@@ -9,6 +9,16 @@ const wordsByCategory = {
     'FLAMINGO',
     'RACCOON',
   ],
+  countries: [
+    'CANADA',
+    'BRAZIL',
+    'JAPAN',
+    'GERMANY',
+    'AUSTRALIA',
+    'ITALY',
+    'FRANCE',
+    'MEXICO',
+  ],
 }
 
 export const getRandomWord = () => {
