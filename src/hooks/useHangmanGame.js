@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { getRandomWord } from '../utils/words'
 
-export const useHangmanGame = () => {
-  const [word, setWord] = useState(getRandomWord())
+export const useHangmanGame = (category = 'all') => {
+  const [word, setWord] = useState(getRandomWord(category))
   const [guessedLetters, setGuessedLetters] = useState([])
   const maxAttempts = 6
 
@@ -27,7 +27,7 @@ export const useHangmanGame = () => {
   }
 
   const restartGame = () => {
-    setWord(getRandomWord())
+    setWord(getRandomWord(category))
     setGuessedLetters([])
   }
 
