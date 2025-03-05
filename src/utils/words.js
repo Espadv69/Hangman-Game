@@ -29,6 +29,16 @@ const wordsByCategory = {
     'KEYBOARD',
     'MONITOR',
   ],
+  fruits: [
+    'BANANA',
+    'WATERMELON',
+    'PINEAPPLE',
+    'STRAWBERRY',
+    'BLUEBERRY',
+    'ORANGE',
+    'GRAPEFRUIT',
+    'MANGO',
+  ],
 }
 
 export const getRandomWord = () => {
