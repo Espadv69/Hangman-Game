@@ -17,7 +17,7 @@ const App = () => {
     isWin,
     addGuessedLetter,
     restartGame,
-  } = useHangmanGame()
+  } = useHangmanGame('all')
 
   return (
     <div className="app">
