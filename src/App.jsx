@@ -31,23 +31,26 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      {!category && (
+      {!category ? (
         <CategorySelector
           categories={categories}
           onSelectCategory={handleSelectCategory}
         />
+      ) : (
+        <>
+          <WordDisplay word={word} guessedLetters={guessedLetters} />
+          <AttemptsCounter attempts={attemptsRemaining} />
+          <KeyBoard
+            guessedLetters={guessedLetters}
+            onLetterClick={addGuessedLetter}
+            isGameOver={isGameOver}
+          />
+          {isGameOver && (
+            <GameOverModal isWin={isWin} word={word} onRestart={restartGame} />
+          )}
+          <RestartButton onRestart={restartGame} />
+        </>
       )}
-      <WordDisplay word={word} guessedLetters={guessedLetters} />
-      <AttemptsCounter attempts={attemptsRemaining} />
-      <KeyBoard
-        guessedLetters={guessedLetters}
-        onLetterClick={addGuessedLetter}
-        isGameOver={isGameOver}
-      />
-      {isGameOver && (
-        <GameOverModal isWin={isWin} word={word} onRestart={restartGame} />
-      )}
-      <RestartButton onRestart={restartGame} />
     </div>
   )
 }
