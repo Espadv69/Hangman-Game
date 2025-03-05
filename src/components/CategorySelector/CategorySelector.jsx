@@ -1,3 +1,5 @@
+import './CategorySelector.css'
+
 const CategorySelector = ({ categories, onSelectCategory }) => {
   return (
     <div className="category-selector">
