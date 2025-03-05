@@ -7,8 +7,11 @@ import KeyBoard from './components/Keyboard/Keyboard'
 import AttemptsCounter from './components/AttemptsCounter/AttemptsCounter'
 import GameOverModal from './components/GameOverModal/GameOverModal'
 import RestartButton from './components/RestartButton/RestartButton'
+import CategorySelector from './components/CategorySelector/CategorySelector'
 
 const App = () => {
+  const [category, setCategory] = useState(null)
+
   const {
     word,
     guessedLetters,
