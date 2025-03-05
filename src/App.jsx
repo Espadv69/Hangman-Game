@@ -20,12 +20,17 @@ const App = () => {
     isWin,
     addGuessedLetter,
     restartGame,
-  } = useHangmanGame('all')
+  } = useHangmanGame(category)
 
   const categories = ['Animals', 'Countries', 'Technology', 'Fruits']
 
   const handleSelectCategory = (selectedCategory) => {
     setCategory(selectedCategory.toLowerCase())
+  }
+
+  const handleRestart = () => {
+    setCategory(null)
+    restartGame()
   }
 
   return (
@@ -48,7 +53,7 @@ const App = () => {
           {isGameOver && (
             <GameOverModal isWin={isWin} word={word} onRestart={restartGame} />
           )}
-          <RestartButton onRestart={restartGame} />
+          <RestartButton onRestart={handleRestart} />
         </>
       )}
     </div>
