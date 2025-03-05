@@ -24,9 +24,19 @@ const App = () => {
 
   const categories = ['Animals', 'Countries', 'Technology', 'Fruits']
 
+  const handleSelectCategory = (selectedCategory) => {
+    setCategory(selectedCategory.toLowerCase())
+  }
+
   return (
     <div className="app">
       <Header />
+      {!category && (
+        <CategorySelector
+          categories={categories}
+          onSelectCategory={handleSelectCategory}
+        />
+      )}
       <WordDisplay word={word} guessedLetters={guessedLetters} />
       <AttemptsCounter attempts={attemptsRemaining} />
       <KeyBoard
