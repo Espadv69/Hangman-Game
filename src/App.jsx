@@ -22,6 +22,8 @@ const App = () => {
     restartGame,
   } = useHangmanGame('all')
 
+  const categories = ['Animals', 'Countries', 'Technology', 'Fruits']
+
   return (
     <div className="app">
       <Header />
