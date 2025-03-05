@@ -41,6 +41,9 @@ const wordsByCategory = {
   ],
 }
 
-export const getRandomWord = () => {
-  return WORDS[Math.floor(Math.random() * WORDS.length)]
+export const getRandomWord = (category = 'all') => {
+  if (category === 'all') {
+    const allWords = Object.values(wordsByCategory).flat()
+    return allWords[Math.floor(Math.random() * allWords.length)]
+  }
 }
