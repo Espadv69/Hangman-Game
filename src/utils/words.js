@@ -19,6 +19,16 @@ const wordsByCategory = {
     'FRANCE',
     'MEXICO',
   ],
+  technology: [
+    'JAVASCRIPT',
+    'REACT',
+    'COMPUTER',
+    'ALGORITHM',
+    'DATABASE',
+    'NETWORK',
+    'KEYBOARD',
+    'MONITOR',
+  ],
 }
 
 export const getRandomWord = () => {
